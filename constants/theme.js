@@ -19,6 +19,7 @@ export const SIZES = {
     font: 14,
     radius: 12,
     padding: 24,
+    statusBarHeight: 30,
 
     // font sizes
     h1: 30,

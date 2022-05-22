@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CryptoDetail, Transaction } from "./screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
+import { LogBox } from 'react-native'
 
 import Tabs from "./navigation/tabs";
-
+import SplashScreen from 'react-native-splash-screen';
 const Stack = createStackNavigator();
 
 const App = () => {
+
+  useEffect(() => {
+    LogBox.ignoreAllLogs(true)
+    SplashScreen.hide();
+  }, [])
+
   return (
     <NavigationContainer>
       <Stack.Navigator
